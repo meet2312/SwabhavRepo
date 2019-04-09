@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace BasicApp
 {
@@ -10,6 +8,15 @@ namespace BasicApp
     {
         static void Main(string[] args)
         {
+            Console.WriteLine(args.Length);
+            for (int i = 0; i < args.Length; i++)
+            {
+                System.Console.WriteLine("Hello {1}", i, args[i]);
+
+            }
+
         }
+
+
     }
 }
