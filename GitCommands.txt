@@ -1,0 +1,20 @@
+Git Command and Repository
+
+->Git and dos command prompt.
+->Git basic commands.
+->Created local repository first in disk with 3 notepad files .
+->Using gitbash in main folder we added .git files in it 
+->Executed basic git commands:-
+>  $ ls --to view files
+>  $notepad filename --to add txt files by checking with environment variable path.
+>  $git log -- to see snapshot file
+>  $git init -- to create master repository
+>  $git status -- to check which files need to commit 
+>  $git add . -- to add files 
+>  $git commit -m message filename -- to commit file made 
+>  $git checkout #code of file -- to change head and check files with data.
+>  $git checkout master -- to comeback to initial head
+->Link remote and local repository (adding) 
+>  $git remote -v -- to view 
+>  $git remote add  short name   url (of git repo)
+>  $git push   short name   master(branchname)
