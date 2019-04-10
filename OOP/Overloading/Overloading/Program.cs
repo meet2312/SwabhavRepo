@@ -9,23 +9,39 @@ namespace Overloading
     class Program
     {
 
-
-        private void PrintThis()
+        private static void PrintThis(string text)
         {
-            Console.WriteLine(10);
-            Console.WriteLine(10.5);
-            Console.WriteLine(true);
-            Console.WriteLine("Hello");
-            Console.WriteLine('#');
-            bool ans = false;
-            Console.WriteLine(ans);
+            Console.WriteLine(text);
+        }
+        private static void PrintThis(int n)
+        {
+            Console.WriteLine(n);
+        }
+        private static void PrintThis(bool value)
+        {
+    
+            Console.WriteLine(value);
+        }
+        private static void PrintThis(char val)
+        {
+            Console.WriteLine(val);
+        }
+        private static void PrintThis(double d)
+        {
+            Console.WriteLine(d);
+        }
+        private static void PrintThis(object value)
+        {
+            Console.WriteLine(value);
         }
 
 
         static void Main(string[] args)
         {
+
+            bool ans = false;
             //writeline(string)
-           Console.WriteLine("This is the first line.");
+            Console.WriteLine("This is the first line.");
 
             //writeline(object)
             Console.WriteLine(DateTime.Now);
@@ -77,23 +93,33 @@ namespace Overloading
             Console.WriteLine(value1);
 
             Console.WriteLine(typeof(uint));
+
+            Console.WriteLine(args);
             
             if (isAdult != true)
                 Console.Write(isAdult);
 
 
             //using printthis() method
-            Program p = new Program();
-            p.PrintThis();
-     
-
+            PrintThis(10);
+            PrintThis("Hello");
+            PrintThis(true);
+            PrintThis('#');
+            PrintThis(10.5);
+            PrintThis(args);
+       
+         
         }
 
-
+     
+            
+            
+           
+       
         
 
     }
 
-   
-    }
+
+}
 
