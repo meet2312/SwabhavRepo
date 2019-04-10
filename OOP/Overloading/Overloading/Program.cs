@@ -8,11 +8,24 @@ namespace Overloading
 {
     class Program
     {
+
+
+        private void PrintThis()
+        {
+            Console.WriteLine(10);
+            Console.WriteLine(10.5);
+            Console.WriteLine(true);
+            Console.WriteLine("Hello");
+            Console.WriteLine('#');
+            bool ans = false;
+            Console.WriteLine(ans);
+        }
+
+
         static void Main(string[] args)
         {
             //writeline(string)
-            string[] lines = { "This is the first line." };
-             Console.WriteLine(lines);
+           Console.WriteLine("This is the first line.");
 
             //writeline(object)
             Console.WriteLine(DateTime.Now);
@@ -38,9 +51,10 @@ namespace Overloading
             long longValue1 = 4294967296;
             Console.WriteLine(longValue1);
 
-
+            
             Console.WriteLine();
 
+            //writeline(bool)
             bool isAdult = true;
             if (isAdult == true)
                 Console.WriteLine(isAdult);
@@ -58,20 +72,28 @@ namespace Overloading
                 Boolean bln = Convert.ToBoolean(rnd.Next(0, 2));
                 Console.WriteLine("True or False: {0}", bln);
 
-
-
+            //writeline(uint)
             uint value1 = 100;
             Console.WriteLine(value1);
 
             Console.WriteLine(typeof(uint));
-
-
-
             
             if (isAdult != true)
                 Console.Write(isAdult);
 
 
+            //using printthis() method
+            Program p = new Program();
+            p.PrintThis();
+     
+
         }
-        }
-}
+
+
+        
+
+    }
+
+   
+    }
+
