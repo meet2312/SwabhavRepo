@@ -15,7 +15,7 @@ namespace Overloading
              Console.WriteLine(lines);
 
             //writeline(object)
-            Console.WriteLine("Today's date: {0:D}", DateTime.Now);
+            Console.WriteLine(DateTime.Now);
 
             //writeline(double)
             double number1 = 11.22;
@@ -51,7 +51,7 @@ namespace Overloading
 
             //writeline(int)
             int no = 22;
-            Console.WriteLine("res=" + no);
+            Console.WriteLine(no);
 
 
             Random rnd = new Random();
@@ -62,6 +62,7 @@ namespace Overloading
 
             uint value1 = 100;
             Console.WriteLine(value1);
+
             Console.WriteLine(typeof(uint));
 
 
@@ -69,10 +70,6 @@ namespace Overloading
             
             if (isAdult != true)
                 Console.Write(isAdult);
-
-            
-
-
 
 
         }
