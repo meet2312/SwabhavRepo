@@ -8,34 +8,7 @@ namespace Overloading
 {
     class Program
     {
-
-        private static void PrintThis(string text)
-        {
-            Console.WriteLine(text);
-        }
-        private static void PrintThis(int n)
-        {
-            Console.WriteLine(n);
-        }
-        private static void PrintThis(bool value)
-        {
-    
-            Console.WriteLine(value);
-        }
-        private static void PrintThis(char val)
-        {
-            Console.WriteLine(val);
-        }
-        private static void PrintThis(double d)
-        {
-            Console.WriteLine(d);
-        }
-        private static void PrintThis(object value)
-        {
-            Console.WriteLine(value);
-        }
-
-
+        
         static void Main(string[] args)
         {
 
@@ -67,7 +40,7 @@ namespace Overloading
             long longValue1 = 4294967296;
             Console.WriteLine(longValue1);
 
-            
+
             Console.WriteLine();
 
             //writeline(bool)
@@ -85,8 +58,8 @@ namespace Overloading
 
 
             Random rnd = new Random();
-                Boolean bln = Convert.ToBoolean(rnd.Next(0, 2));
-                Console.WriteLine("True or False: {0}", bln);
+            Boolean bln = Convert.ToBoolean(rnd.Next(0, 2));
+            Console.WriteLine("True or False: {0}", bln);
 
             //writeline(uint)
             uint value1 = 100;
@@ -95,7 +68,7 @@ namespace Overloading
             Console.WriteLine(typeof(uint));
 
             Console.WriteLine(args);
-            
+
             if (isAdult != true)
                 Console.Write(isAdult);
 
@@ -107,19 +80,38 @@ namespace Overloading
             PrintThis('#');
             PrintThis(10.5);
             PrintThis(args);
-       
-         
+
+
         }
 
-     
-            
-            
-           
-       
-        
+
+        private static void PrintThis(string text)
+        {
+            Console.WriteLine(text);
+        }
+        private static void PrintThis(int n)
+        {
+            Console.WriteLine(n);
+        }
+        private static void PrintThis(bool value)
+        {
+    
+            Console.WriteLine(value);
+        }
+        private static void PrintThis(char val)
+        {
+            Console.WriteLine(val);
+        }
+        private static void PrintThis(double d)
+        {
+            Console.WriteLine(d);
+        }
+        private static void PrintThis(object value)
+        {
+            Console.WriteLine(value);
+        }
 
     }
-
-
+    
 }
 
