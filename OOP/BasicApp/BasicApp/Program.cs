@@ -1,19 +1,26 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+
 
 namespace BasicApp
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main(string[] names)
         {
-            Console.WriteLine(args.Length);
-            for (int i = 0; i < args.Length; i++)
+            Console.WriteLine(names.Length);
+            for (int index = 0; index < names.Length; index++)
             {
-                System.Console.WriteLine("Hello {1}", i, args[i]);
+               Console.WriteLine("Hello {1}", index, names[index]);
+               
 
             }
+
+            foreach (string name in names)
+            {
+               
+                Console.WriteLine(name);
+            }
+
 
         }
 
