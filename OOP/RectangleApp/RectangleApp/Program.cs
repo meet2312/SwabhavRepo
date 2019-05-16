@@ -17,7 +17,7 @@ namespace RectangleApp
             Console.WriteLine("For small rectangle");
             Console.WriteLine("width is:{0}", small.width);
             Console.WriteLine("height is:{0}", small.height);
-            Console.WriteLine(small);
+         
             small.CalculateArea();
             Console.WriteLine("Area is:{0}", small.CalculateArea());
 

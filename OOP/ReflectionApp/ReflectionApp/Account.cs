@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OverridingApp
+namespace ReflectionApp
 {
     class Account
     {
@@ -24,6 +24,10 @@ namespace OverridingApp
         {
             this._accno = acc_no;
             this._name = name1;
+        }
+
+        public Account()
+        {
         }
 
         public void Deposit(double amount)
@@ -52,10 +56,6 @@ namespace OverridingApp
             {
                 return _accno;
             }
-            set
-            {
-                _accno = value;
-            }
         }
 
         public string Name
@@ -63,10 +63,6 @@ namespace OverridingApp
             get
             {
                 return _name;
-            }
-            set
-            {
-                _name = value;
             }
         }
 
@@ -76,23 +72,8 @@ namespace OverridingApp
             {
                 return _balance;
             }
-            set
-            {
-                _balance = value;
-            }
         }
 
-        public override string ToString()
-        {
-            return "Acc:"+"acc no:"+ _accno + "Name:" + _name + "Balance:" + _balance;   
-           // return string.Format("My acc no is:{0}"+_accno+"Name is:{0}"+_name+"bal is:{0}"+_balance);
-        }
-
-        public override Boolean Equals(Object o)
-        {
-            return true;
-            // return string.Format("My acc no is:{0}"+_accno+"Name is:{0}"+_name+"bal is:{0}"+_balance);
-        }
-
+       
     }
 }
