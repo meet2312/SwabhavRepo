@@ -6,24 +6,28 @@ using System.Threading.Tasks;
 
 namespace OverridingApp
 {
-    class Account
+    class Account 
     {
         private int _accno;
         private string _name;
         private double _balance;
-       
 
-        public Account(int accno,string name,double balance)
+
+        public Account(int accno, string name, double balance)
         {
             this._accno = accno;
             this._name = name;
             this._balance = balance;
         }
 
-        public Account(int acc_no,string name1)
+        public Account(int acc_no, string name1)
         {
             this._accno = acc_no;
             this._name = name1;
+        }
+        public Account():base()
+        {
+          
         }
 
         public void Deposit(double amount)
@@ -31,7 +35,7 @@ namespace OverridingApp
             _balance = _balance + amount;
         }
 
-        
+
         public void Withdraw(double amount)
         {
             double balancetoupdate = 0;
@@ -43,7 +47,7 @@ namespace OverridingApp
                 // Console.WriteLine(_balance);
             }
             else Console.WriteLine("Cannot be possible");
-           
+
         }
 
         public int Accno
@@ -81,18 +85,25 @@ namespace OverridingApp
                 _balance = value;
             }
         }
-
-        public override string ToString()
+        
+      /*   public override string ToString()
         {
-            return "Acc:"+"acc no:"+ _accno + "Name:" + _name + "Balance:" + _balance;   
-           // return string.Format("My acc no is:{0}"+_accno+"Name is:{0}"+_name+"bal is:{0}"+_balance);
+          
+          Console.WriteLine("override");
+          return "Acc:"+"acc no:"+ _accno + "Name:" + _name + "Balance:" + _balance;   
+                   // return string.Format("My acc no is:{0}"+_accno+"Name is:{0}"+_name+"bal is:{0}"+_balance);
         }
 
-        public override Boolean Equals(Object o)
-        {
-            return true;
-            // return string.Format("My acc no is:{0}"+_accno+"Name is:{0}"+_name+"bal is:{0}"+_balance);
-        }
+      */
 
+        /*      public override Boolean Equals(Object o)
+              {
+                  return true;
+                  // return string.Format("My acc no is:{0}"+_accno+"Name is:{0}"+_name+"bal is:{0}"+_balance);
+              }
+
+          }
+          */
     }
+
 }

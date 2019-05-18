@@ -8,70 +8,144 @@ namespace OOADChap1
 {
     public class Guitar
     {
-        private string serialNo, builder, model, type, backWood, topWood;
+        private string serialNumber;
         private double price;
-        private string v1;
-        private int v2;
-        private Builder fENDER;
-        private string v3;
-        private Type eLECTRIC;
-        private Wood aLDER1;
-        private Wood aLDER2;
-
-        public Guitar (string serialNo,double price, string builder, string model, string type,string backWood,string topWood)
+        private GuitarSpec spec;
+        public Guitar(String serialNumber, double price, GuitarBuilder.Builder builder, string model, GuitarType.Type type, WoodType.Wood backWood, WoodType.Wood topWood)
         {
-            this.serialNo = serialNo;
+            this.serialNumber = serialNumber;
             this.price = price;
-            this.builder = builder;
-            this.model = model;
-            this.type = type;
-            this.backWood = backWood;
-            this.topWood = topWood;
+            spec = new GuitarSpec(builder, model, type, backWood, topWood);
+
         }
 
-   /*     public Guitar(string v1, int v2, Builder fENDER, string v3, Type eLECTRIC, Wood aLDER1, Wood aLDER2)
+        public string getSerialNumber()
         {
-            this.v1 = v1;
-            this.v2 = v2;
-            this.fENDER = fENDER;
-            this.v3 = v3;
-            this.eLECTRIC = eLECTRIC;
-            this.aLDER1 = aLDER1;
-            this.aLDER2 = aLDER2;
+            return serialNumber;
         }
-*/
-        public string GetSerialNo()
-        {
-            return serialNo;
-        }
-        public double GetPrice()
+
+        public double getPrice()
         {
             return price;
         }
-        public void SetPrice(float newprice)
+
+        public void setPrice(float newPrice)
         {
-            this.price = newprice;
+            this.price = newPrice;
         }
-        public string GetBuilder()
+
+        public GuitarSpec getSpec()
         {
-            return builder;
-        }
-        public string GetModel()
-        {
-            return model;
-        }
-        public  new string  GetType()
-        {
-            return type;
-        }
-        public string GetBackWood()
-        {
-            return backWood;
-        }
-        public string GetTopWood()
-        {
-            return topWood;
+            return spec;
         }
 
     }
+    /*
+    private String serialNumber;
+    private double price;
+    private GuitarSpec guitarSpec;
+
+    public Guitar(string serialNumber,double price, GuitarSpec guitarSpec)
+    {
+        this.serialNumber = serialNumber;
+        this.price = price;
+        this.guitarSpec = guitarSpec;
+    }
+
+    public String getSerialNumber()
+    {
+        return serialNumber;
+    }
+    public double getPrice()
+    {
+        return price;
+    }
+    public GuitarSpec getGuitarSpec()
+    {
+        return guitarSpec;
+    }
+
+
 }
+*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /*  private string serialNo, builder, model, type, backWood, topWood;
+          private double price;
+          private string v1;
+          private int v2;
+          private Builder fENDER;
+          private string v3;
+          private Type eLECTRIC;
+          private Wood aLDER1;
+          private Wood aLDER2;
+
+          public Guitar (string serialNo,double price, string builder, string model, string type,string backWood,string topWood)
+          {
+              this.serialNo = serialNo;
+              this.price = price;
+              this.builder = builder;
+              this.model = model;
+              this.type = type;
+              this.backWood = backWood;
+              this.topWood = topWood;
+          }
+
+          public string GetSerialNo()
+          {
+              return serialNo;
+          }
+          public double GetPrice()
+          {
+              return price;
+          }
+          public void SetPrice(float newprice)
+          {
+              this.price = newprice;
+          }
+          public string GetBuilder()
+          {
+              return builder;
+          }
+          public string GetModel()
+          {
+              return model;
+          }
+          public  new string  GetType()
+          {
+              return type;
+          }
+          public string GetBackWood()
+          {
+              return backWood;
+          }
+          public string GetTopWood()
+          {
+              return topWood;
+          }
+          */
+   

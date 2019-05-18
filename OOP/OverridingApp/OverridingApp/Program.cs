@@ -17,14 +17,17 @@ namespace OverridingApp
             //     ac1.Accno = 111;
             //     ac1.Name = "azxx";
             //     ac1.Balance = 2200;
-            Console.WriteLine(ac1);
+         
             Console.WriteLine(ac1.ToString());
-            Console.WriteLine(ac1 == ac1);
-            Console.WriteLine(ac1.GetHashCode());
-            Console.WriteLine(ac2.GetHashCode());
-            Console.WriteLine(ac1 == ac2);
+            Console.WriteLine(ac1);
+            Console.WriteLine();
+
+            //       Console.WriteLine(ac1 == ac1);
+            //       Console.WriteLine(ac1.GetHashCode());
+            //       Console.WriteLine(ac2.GetHashCode());
+            //       Console.WriteLine(ac1 == ac2);
             //     Console.WriteLine(ac1.ToString().Equals(ac2.ToString()));
-            Console.WriteLine(ac1.Equals(ac2));
+            //       Console.WriteLine(ac1.Equals(ac2));
         }
     }
 }

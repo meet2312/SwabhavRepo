@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D6998A59-B787-4E51-B495-4A4DC7F21322}</ProjectGuid>
+    <ProjectGuid>{E5AFF94C-173A-4900-A5A7-2F7BBC0A6C40}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>OOADChap1</RootNamespace>
-    <AssemblyName>OOADChap1</AssemblyName>
+    <RootNamespace>GuitarApp</RootNamespace>
+    <AssemblyName>GuitarApp</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,14 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Enums\GuitarBuilder.cs" />
     <Compile Include="Guitar.cs" />
     <Compile Include="GuitarSpec.cs" />
-    <Compile Include="Inventory\Inventory.cs" />
+    <Compile Include="Inventory.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Enums\GuitarType.cs" />
-    <Compile Include="Enums\WoodType.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

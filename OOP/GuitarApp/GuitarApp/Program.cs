@@ -4,21 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OOADChap1
+namespace GuitarApp
 {
     class FindGuitarTester
     {
         static void Main(string[] args)
         {
-            GuitarBuilder.ToString(default(GuitarBuilder.Builder));
-
-            GuitarType.ToString(default(GuitarType.Type));
-
-            WoodType.ToString(default(WoodType.Wood));
             Inventory inventory = new Inventory();
             initializeInvetory(inventory);
 
-            GuitarSpec whatErinLikes = new GuitarSpec(GuitarBuilder.Builder.FENDER, "Stratocastor",GuitarType.Type.ELECTRIC, WoodType.Wood.MAPLE, WoodType.Wood.CEDAR);
+            GuitarSpec whatErinLikes = new GuitarSpec(Builder.FENDER, "Stratocastor", Type.ELECTRIC, Wood.MAPLE, Wood.CEDAR);
             List<Guitar> matchingGuitars = inventory.search(whatErinLikes);
             if (matchingGuitars != null)
             {
@@ -45,10 +40,26 @@ namespace OOADChap1
 
         private static void initializeInvetory(Inventory inventory)
         {
-            inventory.addGuitar("1", 3000, GuitarBuilder.Builder.FENDER, "Stratocastor",GuitarType.Type.ELECTRIC, WoodType.Wood.MAPLE, WoodType.Wood.CEDAR);
-            inventory.addGuitar("2", 3500,GuitarBuilder.Builder.FENDER, "Stratocastor", GuitarType.Type.ELECTRIC, WoodType.Wood.MAPLE, WoodType.Wood.CEDAR);
-            inventory.addGuitar("3", 4000, GuitarBuilder.Builder.OLSON, "Stratocastor", GuitarType.Type.ACOUSTIC, WoodType.Wood.ALDER, WoodType.Wood.ALDER);
+            inventory.addGuitar("1", 3000, Builder.FENDER, "Stratocastor", Type.ELECTRIC, Wood.MAPLE, Wood.CEDAR);
+            inventory.addGuitar("2", 3500, Builder.FENDER, "Stratocastor", Type.ELECTRIC, Wood.ALDER, Wood.CEDAR);
+            inventory.addGuitar("3", 4000, Builder.OLSON, "Stratocastor", Type.ACOUSTIC, Wood.ALDER, Wood.ALDER);
 
         }
     }
+    public enum Type
+    {
+        ACOUSTIC, ELECTRIC
+    }
+
+    public enum Builder
+    {
+        FENDER, MARTIN, GIBSON, COLLINGS, OLSON, RYAN, PRS, ANY
+    }
+    public enum Wood
+    {
+        INDIAN_ROSEWOOD, BRAZILIAN_ROSEWOOD, MAHOGANY, MAPLE,
+        COCOBOLO, CEDAR, ADIRONDACK, ALDER, SITKA
+    }
 }
+    
+
