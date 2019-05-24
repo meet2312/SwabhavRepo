@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,11 +9,11 @@ namespace AccountApp.Business
 {
     class Account
     {
+  
         private int _accno;
         private string _name;
         private double _balance;
-       
-
+     
         public Account(int accno,string name,double balance)
         {
             this._accno = accno;
@@ -31,18 +32,34 @@ namespace AccountApp.Business
             _balance = _balance + amount;
         }
 
+        public void Details(Account _a)
+        {
+            Console.WriteLine("acc:{0}", _a._accno);
+            Console.WriteLine("acc _name:{0}", _a._name);
+            Console.WriteLine("acc_balance:{0}", _a._balance);
+        }
         
         public void Withdraw(double amount)
         {
+         
             double balancetoupdate = 0;
             balancetoupdate = _balance - amount;
-            //  Console.WriteLine(amount);
+        
             if (balancetoupdate > 500)
             {
+                Console.WriteLine("Balance after Withdraw");
                 _balance = balancetoupdate;
-                // Console.WriteLine(_balance);
+             
+
             }
-            else Console.WriteLine("Cannot be possible");
+            else
+            {
+                throw new InsufficientFundsException(this);
+                // throw new InsufficientFundsException("InsufficientFundsException");
+                //throw new InsufficientFundsException(_accno,_name,_balance);
+                // throw new InsufficientFundsException("Minimum balance should be 500");
+            }
+         //   else Console.WriteLine("Cannot be possible");
            
         }
 
@@ -69,7 +86,6 @@ namespace AccountApp.Business
                 return _balance;
             }
         }
-
-       
+     
     }
 }

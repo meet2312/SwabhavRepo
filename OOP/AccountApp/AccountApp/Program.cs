@@ -11,13 +11,30 @@ namespace AccountApp
     {
         static void Main(string[] args)
         {
+            
+           
             Account account = new Account(7020, "xyz", 1200);
-            Account account1 = new Account(9090, "abc");
-            account.Deposit(100);
+            Account a = (account);
+            Account account1 = new Account(9090, "abc",7000);
+            //      InsufficientFundsException excep = new InsufficientFundsException(a);
+            //    account.Deposit(100);
+           
             PrintDetails(account);
-            account.Withdraw(500);
-            Console.WriteLine("Balance after Withdraw");
+          //  account.Details(account);
+            try
+            {
+                account.Withdraw(1000);
+               
+            }
+           catch(InsufficientFundsException e)
+            {
+               
+                Console.WriteLine("Exception:{0}", e.Message);
+                 Console.WriteLine("Balance :{0}",e.ac.Balance);
+               
+            }
             PrintDetails(account);
+
             Console.WriteLine("");
          //   account1.Deposit(500);
           //  account1.Withdraw(200);
