@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DiskAndUrlCsvAnalyzer.Loader
+namespace LibraryClient
 {
-    interface ILoader
+   public interface IAutoMobile
     {
-        void Load();
-       
+        void Start();
+        void Stop();
     }
 }

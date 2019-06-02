@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DiskAndUrlCsvAnalyzer.Loader
+namespace FactoryApp
 {
-    interface ILoader
+   public abstract class VehicleFactory
     {
-        void Load();
-       
+        public abstract IFactory GetVehicle(string Vehicle);
     }
 }

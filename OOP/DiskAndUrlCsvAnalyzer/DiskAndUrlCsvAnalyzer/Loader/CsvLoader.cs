@@ -10,7 +10,6 @@ namespace DiskAndUrlCsvAnalyzer.Loader
     class CsvLoader : ILoader
     {
         public  HashSet<Employee> emplist = new HashSet<Employee>();
-
         public void Load()
         {
             string[] lines = File.ReadAllLines(@"E:\swabhav techlabs\csvdata.txt");

@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DiskAndUrlCsvAnalyzer.Loader
+namespace FactoryApp
 {
-    interface ILoader
+   public interface IFactory
     {
-        void Load();
-       
+        void Drive(int miles);
     }
 }

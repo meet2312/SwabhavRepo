@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DiskAndUrlCsvAnalyzer.Loader
+namespace ShoppingCartApp
 {
-    interface ILoader
+    class Invoice
     {
-        void Load();
-       
+
     }
 }

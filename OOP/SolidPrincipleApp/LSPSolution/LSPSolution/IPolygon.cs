@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DiskAndUrlCsvAnalyzer.Loader
+namespace LSPSolution
 {
-    interface ILoader
+    interface IPolygon
     {
-        void Load();
-       
+        double CalculateArea();
     }
 }

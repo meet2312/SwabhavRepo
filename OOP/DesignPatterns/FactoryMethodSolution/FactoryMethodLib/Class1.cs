@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DiskAndUrlCsvAnalyzer.Loader
+namespace FactoryMethodLib
 {
-    interface ILoader
+    public class Class1
     {
-        void Load();
-       
     }
 }

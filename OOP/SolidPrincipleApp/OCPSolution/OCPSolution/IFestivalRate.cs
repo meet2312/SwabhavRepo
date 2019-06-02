@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DiskAndUrlCsvAnalyzer.Loader
+namespace OCPSolution
 {
-    interface ILoader
+    interface IFestivalRate
     {
-        void Load();
-       
+        float GetRate();
     }
 }

@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DiskAndUrlCsvAnalyzer.Loader
+namespace ISPSolution
 {
-    interface ILoader
+    interface IWork
     {
-        void Load();
-       
+        void StartWork();
+        void StopWork();
     }
 }

@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DiskAndUrlCsvAnalyzer.Loader
+namespace OCPViolation
 {
-    interface ILoader
+    class PrintFixedDeposit
     {
-        void Load();
-       
     }
 }

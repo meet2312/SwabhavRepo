@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DiskAndUrlCsvAnalyzer.Loader
+namespace DIPSolution
 {
-    interface ILoader
+    interface ILogger
     {
-        void Load();
-       
+        void Log(string msg); 
     }
 }

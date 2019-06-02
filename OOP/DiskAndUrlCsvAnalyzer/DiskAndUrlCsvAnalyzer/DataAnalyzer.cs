@@ -8,11 +8,17 @@ namespace DiskAndUrlCsvAnalyzer
 {
     class DataAnalyzer
     {
+       
      //   public HashSet<Employee> emplist = new HashSet<Employee>();
-
+        public DataAnalyzer(Loader.ILoader i)
+        {
+            i.Load();
+        }
 
         public string MaxSalariedEmployee(HashSet<Employee> emplist)
         {
+           // Loader.CsvLoader c = new Loader.CsvLoader();
+            
             int max = 0;
             string name = null;
 
@@ -75,6 +81,26 @@ namespace DiskAndUrlCsvAnalyzer
                 
             }
             
+        }
+
+        public void CountEmployeeByDesignations(HashSet<Employee> emplist)
+        {
+            Dictionary<string,string> dictionary = new Dictionary<string,string>();
+            foreach(var e in emplist)
+            {
+                dictionary.Add(e.Empid.ToString(), e.Empdesignation);
+                
+            }
+            Dictionary<string, int> valCount = new Dictionary<string, int>();
+            
+            foreach (string i in dictionary.Values)
+                if (valCount.ContainsKey(i))
+                    valCount[i]++;
+                else
+                    valCount[i] = 1;
+           
+            foreach (KeyValuePair<string, int> kvp in valCount)
+                Console.WriteLine("{0} - {1}", kvp.Key, kvp.Value);
         }
     }
 }
