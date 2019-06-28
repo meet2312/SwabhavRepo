@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FactoryLibraryClient
+namespace FactoryMethodLib
 {
-    internal class Audi : IAutoMobile
+    public class Audi : IAutoMobile
     {
         public void Start()
         {

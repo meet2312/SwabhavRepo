@@ -4,12 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FactoryLibraryClient
+namespace FactoryMethodLib
 {
     public class TeslaFactory : IAutoMobileFactory
     {
         private static TeslaFactory container;
+        private TeslaFactory()
+        {
 
+        }
         public IAutoMobile Make()
         {
             return new Tesla();

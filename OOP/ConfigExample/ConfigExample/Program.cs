@@ -82,3 +82,8 @@ namespace ConfigExample
         }
          
 }
+
+
+
+
+//string name = ConfigurationManager.AppSettings["Name"];

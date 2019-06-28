@@ -45,6 +45,7 @@
     <Compile Include="BMW.cs" />
     <Compile Include="BMWFactory.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="Dummy.cs" />
     <Compile Include="IAutoMobile.cs" />
     <Compile Include="IAutoMobileFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

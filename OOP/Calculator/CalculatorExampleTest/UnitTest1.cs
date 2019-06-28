@@ -25,7 +25,7 @@ namespace CalculatorExampleTest
             catch (NegativeNumberNotSupportedException e)
             {
                 StringAssert.Contains(e.Message,Calculator.NegativenumberNotSupported);
-                Console.WriteLine("Exception:{0}", e.Message);
+                //Console.WriteLine("Exception:{0}", e.Message);
             }
 
            // Assert.Fail("The expected exception was not thrown.");

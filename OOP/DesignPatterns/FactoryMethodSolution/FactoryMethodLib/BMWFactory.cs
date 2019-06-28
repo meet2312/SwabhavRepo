@@ -4,11 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FactoryLibraryClient
+namespace FactoryMethodLib
 {
     public class BMWFactory : IAutoMobileFactory
     {
         private static BMWFactory container;
+        private BMWFactory()
+        {
+
+        }
+        
         public IAutoMobile Make()
         {
             return new BMW();
